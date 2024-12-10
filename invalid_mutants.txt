@@ -1,0 +1,3908 @@
+1.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+from collections import defaultdict
+break;
+
+
+2.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+from collections import defaultdict
+continue;
+
+
+3.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+class WeightedGraph:
+break;
+
+
+4.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+class WeightedGraph:
+continue;
+
+
+5.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+pass
+
+
+6.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def __init__(self, vertices):
+    break;
+
+
+7.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def __init__(self, vertices):
+    continue;
+
+
+8.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+9.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.vertices = vertices
+        break;
+
+
+10.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.vertices = vertices
+        continue;
+
+
+11.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.adj_list = {i: [] for i in range(vertices)}
+        break;
+
+
+12.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.adj_list = {i: [] for i in range(vertices)}
+        continue;
+
+
+13.
+or  ==>  and
+
+mutant:
+        self.adj_list = {i: [] f andi in range(vertices)}
+
+
+14.
+or .* ==> or False
+
+mutant:
+        self.adj_list = {i: [] for False
+
+
+15.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.edges = []
+        break;
+
+
+16.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.edges = []
+        continue;
+
+
+17.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def add_edge(self, u, v, weight):
+    break;
+
+
+18.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def add_edge(self, u, v, weight):
+    continue;
+
+
+19.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+20.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Add a single edge to the graph."""
+        break;
+
+
+21.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Add a single edge to the graph."""
+        continue;
+
+
+22.
+".+" ==> ""
+
+mutant:
+        """
+
+
+23.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+24.
+".+" ==> ""
+
+mutant:
+        """Add a single edge to the graph.""
+
+
+25.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        if (u, v, weight) not in self.edges:
+        break;
+
+
+26.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        if (u, v, weight) not in self.edges:
+        continue;
+
+
+27.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+28.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            self.edges.append((u, v, weight))
+            break;
+
+
+29.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            self.edges.append((u, v, weight))
+            continue;
+
+
+30.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            self.adj_list[u].append((v, weight))
+            break;
+
+
+31.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            self.adj_list[u].append((v, weight))
+            continue;
+
+
+32.
+\[.+\] ==> []
+
+mutant:
+            self.adj_list[].append((v, weight))
+
+
+33.
+\[.*, ==> [
+
+mutant:
+            self.adj_list[ weight))
+
+
+34.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def add_multiple_edges(self, edges):
+    break;
+
+
+35.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def add_multiple_edges(self, edges):
+    continue;
+
+
+36.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+37.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Add multiple edges at once."""
+        break;
+
+
+38.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Add multiple edges at once."""
+        continue;
+
+
+39.
+".+" ==> ""
+
+mutant:
+        """
+
+
+40.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+41.
+".+" ==> ""
+
+mutant:
+        """Add multiple edges at once.""
+
+
+42.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        for u, v, weight in edges:
+        break;
+
+
+43.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        for u, v, weight in edges:
+        continue;
+
+
+44.
+or  ==>  and
+
+mutant:
+        f andu, v, weight in edges:
+
+
+45.
+or .* ==> or False
+
+mutant:
+        for False
+
+
+46.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+47.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def get_edges(self):
+    break;
+
+
+48.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def get_edges(self):
+    continue;
+
+
+49.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+50.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Return all edges in the graph."""
+        break;
+
+
+51.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Return all edges in the graph."""
+        continue;
+
+
+52.
+".+" ==> ""
+
+mutant:
+        """
+
+
+53.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+54.
+".+" ==> ""
+
+mutant:
+        """Return all edges in the graph.""
+
+
+55.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        return self.edges
+        break;
+
+
+56.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        return self.edges
+        continue;
+
+
+57.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def print_graph(self):
+    break;
+
+
+58.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def print_graph(self):
+    continue;
+
+
+59.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+60.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Print edges and adjacency list of the graph."""
+        break;
+
+
+61.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Print edges and adjacency list of the graph."""
+        continue;
+
+
+62.
+".+" ==> ""
+
+mutant:
+        """
+
+
+63.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+64.
+".+" ==> ""
+
+mutant:
+        """Print edges and adjacency list of the graph.""
+
+
+65.
+and .* ==> and True
+
+mutant:
+        """Print edges and True
+
+
+66.
+.* and ==> True and
+
+mutant:
+True and adjacency list of the graph."""
+
+
+67.
+.* and ==> True and
+
+mutant:
+ True and adjacency list of the graph."""
+
+
+68.
+.* and ==> True and
+
+mutant:
+  True and adjacency list of the graph."""
+
+
+69.
+.* and ==> True and
+
+mutant:
+   True and adjacency list of the graph."""
+
+
+70.
+.* and ==> True and
+
+mutant:
+    True and adjacency list of the graph."""
+
+
+71.
+.* and ==> True and
+
+mutant:
+     True and adjacency list of the graph."""
+
+
+72.
+.* and ==> True and
+
+mutant:
+      True and adjacency list of the graph."""
+
+
+73.
+.* and ==> True and
+
+mutant:
+       True and adjacency list of the graph."""
+
+
+74.
+.* and ==> True and
+
+mutant:
+        True and adjacency list of the graph."""
+
+
+75.
+.* and ==> True and
+
+mutant:
+        ""True and adjacency list of the graph."""
+
+
+76.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        print("Edges in the graph:")
+        break;
+
+
+77.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        print("Edges in the graph:")
+        continue;
+
+
+78.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        for u, v, weight in self.edges:
+        break;
+
+
+79.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        for u, v, weight in self.edges:
+        continue;
+
+
+80.
+or  ==>  and
+
+mutant:
+        f andu, v, weight in self.edges:
+
+
+81.
+or .* ==> or False
+
+mutant:
+        for False
+
+
+82.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+83.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        print("\nAdjacency List of the graph:")
+        break;
+
+
+84.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        print("\nAdjacency List of the graph:")
+        continue;
+
+
+85.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        for u in self.adj_list:
+        break;
+
+
+86.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        for u in self.adj_list:
+        continue;
+
+
+87.
+or  ==>  and
+
+mutant:
+        f andu in self.adj_list:
+
+
+88.
+or .* ==> or False
+
+mutant:
+        for False
+
+
+89.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+90.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def is_cyclic_directed(self):
+    break;
+
+
+91.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def is_cyclic_directed(self):
+    continue;
+
+
+92.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+93.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Detect if there is a cycle in a directed graph using DFS."""
+        break;
+
+
+94.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Detect if there is a cycle in a directed graph using DFS."""
+        continue;
+
+
+95.
+".+" ==> ""
+
+mutant:
+        """
+
+
+96.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+97.
+".+" ==> ""
+
+mutant:
+        """Detect if there is a cycle in a directed graph using DFS.""
+
+
+98.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        visited = [False] * self.vertices
+        break;
+
+
+99.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        visited = [False] * self.vertices
+        continue;
+
+
+100.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        rec_stack = [False] * self.vertices
+        break;
+
+
+101.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        rec_stack = [False] * self.vertices
+        continue;
+
+
+102.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        def dfs(v):
+        break;
+
+
+103.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        def dfs(v):
+        continue;
+
+
+104.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+105.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            visited[v] = True
+            break;
+
+
+106.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            visited[v] = True
+            continue;
+
+
+107.
+\[.+\] ==> []
+
+mutant:
+            visited[] = True
+
+
+108.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            rec_stack[v] = True
+            break;
+
+
+109.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            rec_stack[v] = True
+            continue;
+
+
+110.
+\[.+\] ==> []
+
+mutant:
+            rec_stack[] = True
+
+
+111.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            for neighbor, _ in self.adj_list[v]:
+            break;
+
+
+112.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            for neighbor, _ in self.adj_list[v]:
+            continue;
+
+
+113.
+or  ==>  and
+
+mutant:
+            f andneighbor, _ in self.adj_list[v]:
+
+
+114.
+or .* ==> or False
+
+mutant:
+            for False
+
+
+115.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+116.
+\[.+\] ==> []
+
+mutant:
+            for neighbor, _ in self.adj_list[]:
+
+
+117.
+,.*] ==> ]
+
+mutant:
+            for neighbor]:
+
+
+118.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                if not visited[neighbor] and dfs(neighbor):
+                break;
+
+
+119.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                if not visited[neighbor] and dfs(neighbor):
+                continue;
+
+
+120.
+and .* ==> and True
+
+mutant:
+                if not visited[neighbor] and True
+
+
+121.
+.* and ==> True and
+
+mutant:
+True and dfs(neighbor):
+
+
+122.
+.* and ==> True and
+
+mutant:
+ True and dfs(neighbor):
+
+
+123.
+.* and ==> True and
+
+mutant:
+  True and dfs(neighbor):
+
+
+124.
+.* and ==> True and
+
+mutant:
+   True and dfs(neighbor):
+
+
+125.
+.* and ==> True and
+
+mutant:
+    True and dfs(neighbor):
+
+
+126.
+.* and ==> True and
+
+mutant:
+     True and dfs(neighbor):
+
+
+127.
+.* and ==> True and
+
+mutant:
+      True and dfs(neighbor):
+
+
+128.
+.* and ==> True and
+
+mutant:
+       True and dfs(neighbor):
+
+
+129.
+.* and ==> True and
+
+mutant:
+        True and dfs(neighbor):
+
+
+130.
+.* and ==> True and
+
+mutant:
+         True and dfs(neighbor):
+
+
+131.
+.* and ==> True and
+
+mutant:
+          True and dfs(neighbor):
+
+
+132.
+.* and ==> True and
+
+mutant:
+           True and dfs(neighbor):
+
+
+133.
+.* and ==> True and
+
+mutant:
+            True and dfs(neighbor):
+
+
+134.
+.* and ==> True and
+
+mutant:
+             True and dfs(neighbor):
+
+
+135.
+.* and ==> True and
+
+mutant:
+              True and dfs(neighbor):
+
+
+136.
+.* and ==> True and
+
+mutant:
+               True and dfs(neighbor):
+
+
+137.
+.* and ==> True and
+
+mutant:
+                True and dfs(neighbor):
+
+
+138.
+.* and ==> True and
+
+mutant:
+                iTrue and dfs(neighbor):
+
+
+139.
+.* and ==> True and
+
+mutant:
+                ifTrue and dfs(neighbor):
+
+
+140.
+.* and ==> True and
+
+mutant:
+                if not visited[True and dfs(neighbor):
+
+
+141.
+.* and ==> True and
+
+mutant:
+                if not visited[nTrue and dfs(neighbor):
+
+
+142.
+.* and ==> True and
+
+mutant:
+                if not visited[neTrue and dfs(neighbor):
+
+
+143.
+.* and ==> True and
+
+mutant:
+                if not visited[neiTrue and dfs(neighbor):
+
+
+144.
+.* and ==> True and
+
+mutant:
+                if not visited[neigTrue and dfs(neighbor):
+
+
+145.
+.* and ==> True and
+
+mutant:
+                if not visited[neighTrue and dfs(neighbor):
+
+
+146.
+.* and ==> True and
+
+mutant:
+                if not visited[neighbTrue and dfs(neighbor):
+
+
+147.
+.* and ==> True and
+
+mutant:
+                if not visited[neighboTrue and dfs(neighbor):
+
+
+148.
+.* and ==> True and
+
+mutant:
+                if not visited[neighborTrue and dfs(neighbor):
+
+
+149.
+.* and ==> True and
+
+mutant:
+                if not visited[neighbor]True and dfs(neighbor):
+
+
+150.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                pass
+
+
+151.
+\[.+\] ==> []
+
+mutant:
+                if not visited[] and dfs(neighbor):
+
+
+152.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                elif rec_stack[neighbor]:
+                break;
+
+
+153.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                elif rec_stack[neighbor]:
+                continue;
+
+
+154.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                pass
+
+
+155.
+\[.+\] ==> []
+
+mutant:
+                elif rec_stack[]:
+
+
+156.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            rec_stack[v] = False
+            break;
+
+
+157.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            rec_stack[v] = False
+            continue;
+
+
+158.
+\[.+\] ==> []
+
+mutant:
+            rec_stack[] = False
+
+
+159.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            return False
+            break;
+
+
+160.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            return False
+            continue;
+
+
+161.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        return any(dfs(node) for node in range(self.vertices) if not visited[node])
+        break;
+
+
+162.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        return any(dfs(node) for node in range(self.vertices) if not visited[node])
+        continue;
+
+
+163.
+or  ==>  and
+
+mutant:
+        return any(dfs(node) f andnode in range(self.vertices) if not visited[node])
+
+
+164.
+or .* ==> or False
+
+mutant:
+        return any(dfs(node) for False
+
+
+165.
+\[.+\] ==> []
+
+mutant:
+        return any(dfs(node) for node in range(self.vertices) if not visited[])
+
+
+166.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def is_cyclic_undirected(self):
+    break;
+
+
+167.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def is_cyclic_undirected(self):
+    continue;
+
+
+168.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+169.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Detect if there is a cycle in an undirected graph using DFS."""
+        break;
+
+
+170.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Detect if there is a cycle in an undirected graph using DFS."""
+        continue;
+
+
+171.
+".+" ==> ""
+
+mutant:
+        """
+
+
+172.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+173.
+".+" ==> ""
+
+mutant:
+        """Detect if there is a cycle in an undirected graph using DFS.""
+
+
+174.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        visited = [False] * self.vertices
+        break;
+
+
+175.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        visited = [False] * self.vertices
+        continue;
+
+
+176.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        def dfs(v, parent):
+        break;
+
+
+177.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        def dfs(v, parent):
+        continue;
+
+
+178.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+179.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            visited[v] = True
+            break;
+
+
+180.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            visited[v] = True
+            continue;
+
+
+181.
+\[.+\] ==> []
+
+mutant:
+            visited[] = True
+
+
+182.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            for neighbor, _ in self.adj_list[v]:
+            break;
+
+
+183.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            for neighbor, _ in self.adj_list[v]:
+            continue;
+
+
+184.
+or  ==>  and
+
+mutant:
+            f andneighbor, _ in self.adj_list[v]:
+
+
+185.
+or .* ==> or False
+
+mutant:
+            for False
+
+
+186.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+187.
+\[.+\] ==> []
+
+mutant:
+            for neighbor, _ in self.adj_list[]:
+
+
+188.
+,.*] ==> ]
+
+mutant:
+            for neighbor]:
+
+
+189.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                if not visited[neighbor]:
+                break;
+
+
+190.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                if not visited[neighbor]:
+                continue;
+
+
+191.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                pass
+
+
+192.
+\[.+\] ==> []
+
+mutant:
+                if not visited[]:
+
+
+193.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                    if dfs(neighbor, v):
+                    break;
+
+
+194.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                    if dfs(neighbor, v):
+                    continue;
+
+
+195.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                    pass
+
+
+196.
+! ==>
+
+mutant:
+                elif parent = neighbor:
+
+
+197.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                elif parent != neighbor:
+                break;
+
+
+198.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                elif parent != neighbor:
+                continue;
+
+
+199.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                pass
+
+
+200.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            return False
+            break;
+
+
+201.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            return False
+            continue;
+
+
+202.
+-([^>]) ==> /\1
+
+mutant:
+        return any(dfs(node, /1) for node in range(self.vertices) if not visited[node])
+
+
+203.
+-([^>]) ==> %\1
+
+mutant:
+        return any(dfs(node, %1) for node in range(self.vertices) if not visited[node])
+
+
+204.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        return any(dfs(node, -1) for node in range(self.vertices) if not visited[node])
+        break;
+
+
+205.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        return any(dfs(node, -1) for node in range(self.vertices) if not visited[node])
+        continue;
+
+
+206.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        return any ( -1,dfs(node) for node in range(self.vertices) if not visited[node])
+
+
+207.
+or  ==>  and
+
+mutant:
+        return any(dfs(node, -1) f andnode in range(self.vertices) if not visited[node])
+
+
+208.
+or .* ==> or False
+
+mutant:
+        return any(dfs(node, -1) for False
+
+
+209.
+\[.+\] ==> []
+
+mutant:
+        return any(dfs(node, -1) for node in range(self.vertices) if not visited[])
+
+
+210.
+,.*] ==> ]
+
+mutant:
+        return any(dfs(node])
+
+
+211.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def is_negative_cycle(self):
+    break;
+
+
+212.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def is_negative_cycle(self):
+    continue;
+
+
+213.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+214.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Detect if there is a negative cycle using Bellman-Ford."""
+        break;
+
+
+215.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Detect if there is a negative cycle using Bellman-Ford."""
+        continue;
+
+
+216.
+".+" ==> ""
+
+mutant:
+        """
+
+
+217.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+218.
+".+" ==> ""
+
+mutant:
+        """Detect if there is a negative cycle using Bellman-Ford.""
+
+
+219.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        dist = [float("inf")] * self.vertices
+        break;
+
+
+220.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        dist = [float("inf")] * self.vertices
+        continue;
+
+
+221.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        dist[0] = 0
+        break;
+
+
+222.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        dist[0] = 0
+        continue;
+
+
+223.
+\[.+\] ==> []
+
+mutant:
+        dist[] = 0
+
+
+224.
+-([^>]) ==> \1
+
+mutant:
+        for _ in range(self.vertices  1):
+
+
+225.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        for _ in range(self.vertices - 1):
+        break;
+
+
+226.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        for _ in range(self.vertices - 1):
+        continue;
+
+
+227.
+or  ==>  and
+
+mutant:
+        f and_ in range(self.vertices - 1):
+
+
+228.
+or .* ==> or False
+
+mutant:
+        for False
+
+
+229.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+230.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            for u, v, weight in self.edges:
+            break;
+
+
+231.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            for u, v, weight in self.edges:
+            continue;
+
+
+232.
+or  ==>  and
+
+mutant:
+            f andu, v, weight in self.edges:
+
+
+233.
+or .* ==> or False
+
+mutant:
+            for False
+
+
+234.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+235.
+! ==>
+
+mutant:
+                if dist[u] = float("inf") and dist[u] + weight < dist[v]:
+
+
+236.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight < dist[v]:
+                break;
+
+
+237.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight < dist[v]:
+                continue;
+
+
+238.
+and .* ==> and True
+
+mutant:
+                if dist[u] != float("inf") and True
+
+
+239.
+.* and ==> True and
+
+mutant:
+True and dist[u] + weight < dist[v]:
+
+
+240.
+.* and ==> True and
+
+mutant:
+ True and dist[u] + weight < dist[v]:
+
+
+241.
+.* and ==> True and
+
+mutant:
+  True and dist[u] + weight < dist[v]:
+
+
+242.
+.* and ==> True and
+
+mutant:
+   True and dist[u] + weight < dist[v]:
+
+
+243.
+.* and ==> True and
+
+mutant:
+    True and dist[u] + weight < dist[v]:
+
+
+244.
+.* and ==> True and
+
+mutant:
+     True and dist[u] + weight < dist[v]:
+
+
+245.
+.* and ==> True and
+
+mutant:
+      True and dist[u] + weight < dist[v]:
+
+
+246.
+.* and ==> True and
+
+mutant:
+       True and dist[u] + weight < dist[v]:
+
+
+247.
+.* and ==> True and
+
+mutant:
+        True and dist[u] + weight < dist[v]:
+
+
+248.
+.* and ==> True and
+
+mutant:
+         True and dist[u] + weight < dist[v]:
+
+
+249.
+.* and ==> True and
+
+mutant:
+          True and dist[u] + weight < dist[v]:
+
+
+250.
+.* and ==> True and
+
+mutant:
+           True and dist[u] + weight < dist[v]:
+
+
+251.
+.* and ==> True and
+
+mutant:
+            True and dist[u] + weight < dist[v]:
+
+
+252.
+.* and ==> True and
+
+mutant:
+             True and dist[u] + weight < dist[v]:
+
+
+253.
+.* and ==> True and
+
+mutant:
+              True and dist[u] + weight < dist[v]:
+
+
+254.
+.* and ==> True and
+
+mutant:
+               True and dist[u] + weight < dist[v]:
+
+
+255.
+.* and ==> True and
+
+mutant:
+                True and dist[u] + weight < dist[v]:
+
+
+256.
+.* and ==> True and
+
+mutant:
+                iTrue and dist[u] + weight < dist[v]:
+
+
+257.
+.* and ==> True and
+
+mutant:
+                ifTrue and dist[u] + weight < dist[v]:
+
+
+258.
+.* and ==> True and
+
+mutant:
+                if dist[True and dist[u] + weight < dist[v]:
+
+
+259.
+.* and ==> True and
+
+mutant:
+                if dist[uTrue and dist[u] + weight < dist[v]:
+
+
+260.
+.* and ==> True and
+
+mutant:
+                if dist[u]True and dist[u] + weight < dist[v]:
+
+
+261.
+.* and ==> True and
+
+mutant:
+                if dist[u] True and dist[u] + weight < dist[v]:
+
+
+262.
+.* and ==> True and
+
+mutant:
+                if dist[u] !True and dist[u] + weight < dist[v]:
+
+
+263.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float(True and dist[u] + weight < dist[v]:
+
+
+264.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float("True and dist[u] + weight < dist[v]:
+
+
+265.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float("iTrue and dist[u] + weight < dist[v]:
+
+
+266.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float("inTrue and dist[u] + weight < dist[v]:
+
+
+267.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float("infTrue and dist[u] + weight < dist[v]:
+
+
+268.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float("inf"True and dist[u] + weight < dist[v]:
+
+
+269.
+.* and ==> True and
+
+mutant:
+                if dist[u] != float("inf")True and dist[u] + weight < dist[v]:
+
+
+270.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                pass
+
+
+271.
+\[.+\] ==> []
+
+mutant:
+                if dist[]:
+
+
+272.
+\[.+\] ==> []
+
+mutant:
+                if dist[u] != float("inf") and dist[]:
+
+
+273.
+\[.+\] ==> []
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight < dist[]:
+
+
+274.
+\[.+\] ==> []
+
+mutant:
+                    dist[] + weight
+
+
+275.
+\[.+\] ==> []
+
+mutant:
+                    dist[v] = dist[] + weight
+
+
+276.
+! ==>
+
+mutant:
+        return any(dist[u] = float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+277.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+        break;
+
+
+278.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+        continue;
+
+
+279.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[v] for u , weight in self.edges, v)
+
+
+280.
+or  ==>  and
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[v] f andu, v, weight in self.edges)
+
+
+281.
+and .* ==> and True
+
+mutant:
+        return any(dist[u] != float("inf") and True
+
+
+282.
+or .* ==> or False
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[v] for False
+
+
+283.
+.* and ==> True and
+
+mutant:
+True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+284.
+.* and ==> True and
+
+mutant:
+ True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+285.
+.* and ==> True and
+
+mutant:
+  True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+286.
+.* and ==> True and
+
+mutant:
+   True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+287.
+.* and ==> True and
+
+mutant:
+    True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+288.
+.* and ==> True and
+
+mutant:
+     True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+289.
+.* and ==> True and
+
+mutant:
+      True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+290.
+.* and ==> True and
+
+mutant:
+       True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+291.
+.* and ==> True and
+
+mutant:
+        True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+292.
+.* and ==> True and
+
+mutant:
+        rTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+293.
+.* and ==> True and
+
+mutant:
+        reTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+294.
+.* and ==> True and
+
+mutant:
+        retTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+295.
+.* and ==> True and
+
+mutant:
+        retuTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+296.
+.* and ==> True and
+
+mutant:
+        returTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+297.
+.* and ==> True and
+
+mutant:
+        returnTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+298.
+.* and ==> True and
+
+mutant:
+        return True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+299.
+.* and ==> True and
+
+mutant:
+        return aTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+300.
+.* and ==> True and
+
+mutant:
+        return anTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+301.
+.* and ==> True and
+
+mutant:
+        return anyTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+302.
+.* and ==> True and
+
+mutant:
+        return any(dist[True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+303.
+.* and ==> True and
+
+mutant:
+        return any(dist[uTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+304.
+.* and ==> True and
+
+mutant:
+        return any(dist[u]True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+305.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+306.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] !True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+307.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float(True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+308.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float("True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+309.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float("iTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+310.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float("inTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+311.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float("infTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+312.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float("inf"True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+313.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != float("inf")True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+314.
+\[.+\] ==> []
+
+mutant:
+        return any(dist[] for u, v, weight in self.edges)
+
+
+315.
+\[.+\] ==> []
+
+mutant:
+        return any(dist[u] != float("inf") and dist[] for u, v, weight in self.edges)
+
+
+316.
+\[.+\] ==> []
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[] for u, v, weight in self.edges)
+
+
+317.
+\[.*, ==> [
+
+mutant:
+        return any(dist[ weight in self.edges)
+
+
+318.
+\[.*, ==> [
+
+mutant:
+        return any(dist[u] != float("inf") and dist[ weight in self.edges)
+
+
+319.
+\[.*, ==> [
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[ weight in self.edges)
+
+
+320.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def reset_graph(self):
+    break;
+
+
+321.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def reset_graph(self):
+    continue;
+
+
+322.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+323.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Reset the graph to its empty state."""
+        break;
+
+
+324.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Reset the graph to its empty state."""
+        continue;
+
+
+325.
+".+" ==> ""
+
+mutant:
+        """
+
+
+326.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+327.
+".+" ==> ""
+
+mutant:
+        """Reset the graph to its empty state.""
+
+
+328.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.edges.clear()
+        break;
+
+
+329.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.edges.clear()
+        continue;
+
+
+330.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.adj_list = {i: [] for i in range(self.vertices)}
+        break;
+
+
+331.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.adj_list = {i: [] for i in range(self.vertices)}
+        continue;
+
+
+332.
+or  ==>  and
+
+mutant:
+        self.adj_list = {i: [] f andi in range(self.vertices)}
+
+
+333.
+or .* ==> or False
+
+mutant:
+        self.adj_list = {i: [] for False
+
+
+334.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def union(self, parent, u, v):
+    break;
+
+
+335.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def union(self, parent, u, v):
+    continue;
+
+
+336.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+337.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Union-find helper function."""
+        break;
+
+
+338.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Union-find helper function."""
+        continue;
+
+
+339.
+".+" ==> ""
+
+mutant:
+        """
+
+
+340.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+341.
+".+" ==> ""
+
+mutant:
+        """Union-find helper function.""
+
+
+342.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        root_u = self.find_parent(parent, u)
+        break;
+
+
+343.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        root_u = self.find_parent(parent, u)
+        continue;
+
+
+344.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        root_v = self.find_parent(parent, v)
+        break;
+
+
+345.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        root_v = self.find_parent(parent, v)
+        continue;
+
+
+346.
+! ==>
+
+mutant:
+        if root_u = root_v:
+
+
+347.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        if root_u != root_v:
+        break;
+
+
+348.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        if root_u != root_v:
+        continue;
+
+
+349.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+350.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            parent[root_u] = root_v
+            break;
+
+
+351.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            parent[root_u] = root_v
+            continue;
+
+
+352.
+\[.+\] ==> []
+
+mutant:
+            parent[] = root_v
+
+
+353.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def find_parent(self, parent, v):
+    break;
+
+
+354.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def find_parent(self, parent, v):
+    continue;
+
+
+355.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+356.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Find the root of the node using path compression."""
+        break;
+
+
+357.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Find the root of the node using path compression."""
+        continue;
+
+
+358.
+".+" ==> ""
+
+mutant:
+        """
+
+
+359.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+360.
+".+" ==> ""
+
+mutant:
+        """Find the root of the node using path compression.""
+
+
+361.
+-([^>]) ==> *\1
+
+mutant:
+        if parent[v] == *1:
+
+
+362.
+-([^>]) ==> /\1
+
+mutant:
+        if parent[v] == /1:
+
+
+363.
+-([^>]) ==> %\1
+
+mutant:
+        if parent[v] == %1:
+
+
+364.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        if parent[v] == -1:
+        break;
+
+
+365.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        if parent[v] == -1:
+        continue;
+
+
+366.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+367.
+\[.+\] ==> []
+
+mutant:
+        if parent[] == -1:
+
+
+368.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            return v
+            break;
+
+
+369.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            return v
+            continue;
+
+
+370.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        parent[v] = self.find_parent(parent, parent[v])
+        break;
+
+
+371.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        parent[v] = self.find_parent(parent, parent[v])
+        continue;
+
+
+372.
+\[.+\] ==> []
+
+mutant:
+        parent[])
+
+
+373.
+\[.+\] ==> []
+
+mutant:
+        parent[v] = self.find_parent(parent, parent[])
+
+
+374.
+\[.*, ==> [
+
+mutant:
+        parent[ parent[v])
+
+
+375.
+,.*] ==> ]
+
+mutant:
+        parent[v] = self.find_parent(parent])
+
+
+376.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        return parent[v]
+        break;
+
+
+377.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        return parent[v]
+        continue;
+
+
+378.
+\[.+\] ==> []
+
+mutant:
+        return parent[]
+
+
+379.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def is_cyclic_undirected_union_find(self):
+    break;
+
+
+380.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def is_cyclic_undirected_union_find(self):
+    continue;
+
+
+381.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+382.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Detect cycles in an undirected graph using Union-Find."""
+        break;
+
+
+383.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Detect cycles in an undirected graph using Union-Find."""
+        continue;
+
+
+384.
+".+" ==> ""
+
+mutant:
+        """
+
+
+385.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+386.
+".+" ==> ""
+
+mutant:
+        """Detect cycles in an undirected graph using Union-Find.""
+
+
+387.
+-([^>]) ==> /\1
+
+mutant:
+        parent = [/1] * self.vertices
+
+
+388.
+-([^>]) ==> %\1
+
+mutant:
+        parent = [%1] * self.vertices
+
+
+389.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        parent = [-1] * self.vertices
+        break;
+
+
+390.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        parent = [-1] * self.vertices
+        continue;
+
+
+391.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        for u, v, _ in self.edges:
+        break;
+
+
+392.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        for u, v, _ in self.edges:
+        continue;
+
+
+393.
+or  ==>  and
+
+mutant:
+        f andu, v, _ in self.edges:
+
+
+394.
+or .* ==> or False
+
+mutant:
+        for False
+
+
+395.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+396.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            if self.find_parent(parent, u) == self.find_parent(parent, v):
+            break;
+
+
+397.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+            if self.find_parent(parent, u) == self.find_parent(parent, v):
+            continue;
+
+
+398.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+399.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        return False
+        break;
+
+
+400.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        return False
+        continue;
+
+
+401.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+class GraphRenderer:
+break;
+
+
+402.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+class GraphRenderer:
+continue;
+
+
+403.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+pass
+
+
+404.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def __init__(self, graph):
+    break;
+
+
+405.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def __init__(self, graph):
+    continue;
+
+
+406.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+407.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Initialize the renderer for visualizing the graph."""
+        break;
+
+
+408.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Initialize the renderer for visualizing the graph."""
+        continue;
+
+
+409.
+".+" ==> ""
+
+mutant:
+        """
+
+
+410.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+411.
+".+" ==> ""
+
+mutant:
+        """Initialize the renderer for visualizing the graph.""
+
+
+412.
+or .* ==> or False
+
+mutant:
+        """Initialize the renderer for False
+
+
+413.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.graph = graph
+        break;
+
+
+414.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.graph = graph
+        continue;
+
+
+415.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def render_graph(self):
+    break;
+
+
+416.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def render_graph(self):
+    continue;
+
+
+417.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+418.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Render the graph's edges and adjacency list."""
+        break;
+
+
+419.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Render the graph's edges and adjacency list."""
+        continue;
+
+
+420.
+".+" ==> ""
+
+mutant:
+        """
+
+
+421.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+422.
+".+" ==> ""
+
+mutant:
+        """Render the graph's edges and adjacency list.""
+
+
+423.
+and .* ==> and True
+
+mutant:
+        """Render the graph's edges and True
+
+
+424.
+.* and ==> True and
+
+mutant:
+True and adjacency list."""
+
+
+425.
+.* and ==> True and
+
+mutant:
+ True and adjacency list."""
+
+
+426.
+.* and ==> True and
+
+mutant:
+  True and adjacency list."""
+
+
+427.
+.* and ==> True and
+
+mutant:
+   True and adjacency list."""
+
+
+428.
+.* and ==> True and
+
+mutant:
+    True and adjacency list."""
+
+
+429.
+.* and ==> True and
+
+mutant:
+     True and adjacency list."""
+
+
+430.
+.* and ==> True and
+
+mutant:
+      True and adjacency list."""
+
+
+431.
+.* and ==> True and
+
+mutant:
+       True and adjacency list."""
+
+
+432.
+.* and ==> True and
+
+mutant:
+        True and adjacency list."""
+
+
+433.
+.* and ==> True and
+
+mutant:
+        ""True and adjacency list."""
+
+
+434.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.graph.print_graph()
+        break;
+
+
+435.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.graph.print_graph()
+        continue;
+
+
+436.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+class WeightedGraphHandler:
+break;
+
+
+437.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+class WeightedGraphHandler:
+continue;
+
+
+438.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+pass
+
+
+439.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def __init__(self, vertices):
+    break;
+
+
+440.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def __init__(self, vertices):
+    continue;
+
+
+441.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+442.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Initialize the graph handler."""
+        break;
+
+
+443.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Initialize the graph handler."""
+        continue;
+
+
+444.
+".+" ==> ""
+
+mutant:
+        """
+
+
+445.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+446.
+".+" ==> ""
+
+mutant:
+        """Initialize the graph handler.""
+
+
+447.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.graph = WeightedGraph(vertices)
+        break;
+
+
+448.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.graph = WeightedGraph(vertices)
+        continue;
+
+
+449.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.renderer = GraphRenderer(self.graph)
+        break;
+
+
+450.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.renderer = GraphRenderer(self.graph)
+        continue;
+
+
+451.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def add_edges(self, edges):
+    break;
+
+
+452.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def add_edges(self, edges):
+    continue;
+
+
+453.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+454.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Add edges to the graph."""
+        break;
+
+
+455.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Add edges to the graph."""
+        continue;
+
+
+456.
+".+" ==> ""
+
+mutant:
+        """
+
+
+457.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+458.
+".+" ==> ""
+
+mutant:
+        """Add edges to the graph.""
+
+
+459.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.graph.add_multiple_edges(edges)
+        break;
+
+
+460.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.graph.add_multiple_edges(edges)
+        continue;
+
+
+461.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def render_graph(self):
+    break;
+
+
+462.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def render_graph(self):
+    continue;
+
+
+463.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+464.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Render the graph."""
+        break;
+
+
+465.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Render the graph."""
+        continue;
+
+
+466.
+".+" ==> ""
+
+mutant:
+        """
+
+
+467.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+468.
+".+" ==> ""
+
+mutant:
+        """Render the graph.""
+
+
+469.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        self.renderer.render_graph()
+        break;
+
+
+470.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        self.renderer.render_graph()
+        continue;
+
+
+471.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    def cycle_detection_summary(self):
+    break;
+
+
+472.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    def cycle_detection_summary(self):
+    continue;
+
+
+473.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+474.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        """Print the cycle detection summary."""
+        break;
+
+
+475.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        """Print the cycle detection summary."""
+        continue;
+
+
+476.
+".+" ==> ""
+
+mutant:
+        """
+
+
+477.
+".+" ==> ""
+
+mutant:
+        """"
+
+
+478.
+".+" ==> ""
+
+mutant:
+        """Print the cycle detection summary.""
+
+
+479.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        print("\nCycle detection summary:")
+        break;
+
+
+480.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        print("\nCycle detection summary:")
+        continue;
+
+
+481.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        print(f"Directed cycle detected: {self.graph.is_cyclic_directed()}")
+        break;
+
+
+482.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        print(f"Directed cycle detected: {self.graph.is_cyclic_directed()}")
+        continue;
+
+
+483.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        print(f"Undirected cycle detected: {self.graph.is_cyclic_undirected()}")
+        break;
+
+
+484.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        print(f"Undirected cycle detected: {self.graph.is_cyclic_undirected()}")
+        continue;
+
+
+485.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        print(f"Negative cycle detected: {self.graph.is_negative_cycle()}")
+        break;
+
+
+486.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        print(f"Negative cycle detected: {self.graph.is_negative_cycle()}")
+        continue;
+
+
+487.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+if __name__ == "__main__":
+break;
+
+
+488.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+if __name__ == "__main__":
+continue;
+
+
+489.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+pass
+
+
+490.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    graph_handler = WeightedGraphHandler(4)
+    break;
+
+
+491.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    graph_handler = WeightedGraphHandler(4)
+    continue;
+
+
+492.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    edges = [
+    break;
+
+
+493.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    edges = [
+    continue;
+
+
+494.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+495.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        (0, 1, 10),
+        break;
+
+
+496.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        (0, 1, 10),
+        continue;
+
+
+497.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+498.
+,.+, ==> ,
+
+mutant:
+        (0,
+
+
+499.
+,.+, ==> ,
+
+mutant:
+        (0, 1,
+
+
+500.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        (1, 2, 20),
+        break;
+
+
+501.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        (1, 2, 20),
+        continue;
+
+
+502.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+503.
+,.+, ==> ,
+
+mutant:
+        (1,
+
+
+504.
+,.+, ==> ,
+
+mutant:
+        (1, 2,
+
+
+505.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        (2, 3, 30),
+        break;
+
+
+506.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        (2, 3, 30),
+        continue;
+
+
+507.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+508.
+,.+, ==> ,
+
+mutant:
+        (2,
+
+
+509.
+,.+, ==> ,
+
+mutant:
+        (2, 3,
+
+
+510.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        (3, 0, 40),
+        break;
+
+
+511.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        (3, 0, 40),
+        continue;
+
+
+512.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+513.
+,.+, ==> ,
+
+mutant:
+        (3,
+
+
+514.
+,.+, ==> ,
+
+mutant:
+        (3, 0,
+
+
+515.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+        (0, 2, 50)
+        break;
+
+
+516.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+        (0, 2, 50)
+        continue;
+
+
+517.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+518.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    ]
+    break;
+
+
+519.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    ]
+    continue;
+
+
+520.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+521.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    graph_handler.add_edges(edges)
+    break;
+
+
+522.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    graph_handler.add_edges(edges)
+    continue;
+
+
+523.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    graph_handler.render_graph()
+    break;
+
+
+524.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    graph_handler.render_graph()
+    continue;
+
+
+525.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+    graph_handler.cycle_detection_summary()
+    break;
+
+
+526.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+    graph_handler.cycle_detection_summary()
+    continue;
+
+

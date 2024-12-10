@@ -1,0 +1,2512 @@
+1.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+pass
+
+
+2.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def __init__ ( vertices,self):
+
+
+3.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+4.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+5.
+{.+} ==> {}
+
+mutant:
+        self.adj_list = {}
+
+
+6.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+7.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def add_edge ( u,self, v, weight):
+
+
+8.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def add_edge(self , v, u, weight):
+
+
+9.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def add_edge(self, u , weight, v):
+
+
+10.
+,.+, ==> ,
+
+mutant:
+    def add_edge(self, weight):
+
+
+11.
+,.+, ==> ,
+
+mutant:
+    def add_edge(self, u, weight):
+
+
+12.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+13.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        if  ( v,u, weight) not in self.edges:
+
+
+14.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        if (u , weight, v) not in self.edges:
+
+
+15.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+        if not ((u, v, weight) not in self.edges):
+
+
+16.
+,.+, ==> ,
+
+mutant:
+        if (u, weight) not in self.edges:
+
+
+17.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.edges.append ( v,(u, weight))
+
+
+18.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.edges.append( ( v,u, weight))
+
+
+19.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.edges.append((u , weight, v))
+
+
+20.
+end ==> begin
+
+mutant:
+            self.edges.appbegin((u, v, weight))
+
+
+21.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+22.
+,.+, ==> ,
+
+mutant:
+            self.edges.append((u, weight))
+
+
+23.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.adj_list[u].append ( weight,(v))
+
+
+24.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.adj_list[u].append( ( weight,v))
+
+
+25.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+26.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def add_multiple_edges ( edges,self):
+
+
+27.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+28.
+,.+, ==> ,
+
+mutant:
+        for u, weight in edges:
+
+
+29.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            self.add_edge(u, v, weight)
+            break;
+
+
+30.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.add_edge ( v,u, weight)
+
+
+31.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.add_edge(u , weight, v)
+
+
+32.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+33.
+,.+, ==> ,
+
+mutant:
+            self.add_edge(u, weight)
+
+
+34.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+35.
+return .*\n ==> return None\n
+
+mutant:
+        return None
+
+
+36.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+37.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+38.
+,.+, ==> ,
+
+mutant:
+        for u, weight in self.edges:
+
+
+39.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            print(f"{u} -> {v} (Weight: {weight})")
+            break;
+
+
+40.
+".+" ==> ""
+
+mutant:
+            print(f"")
+
+
+41.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+42.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+43.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            print(f"{u} -> {self.adj_list[u]}")
+            break;
+
+
+44.
+".+" ==> ""
+
+mutant:
+            print(f"")
+
+
+45.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+46.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+47.
+\* ==> +
+
+mutant:
+        visited = [False] + self.vertices
+
+
+48.
+\* ==> -
+
+mutant:
+        visited = [False] - self.vertices
+
+
+49.
+\* ==> /
+
+mutant:
+        visited = [False] / self.vertices
+
+
+50.
+\* ==> %
+
+mutant:
+        visited = [False] % self.vertices
+
+
+51.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+52.
+\[.+\] ==> []
+
+mutant:
+        visited = [] * self.vertices
+
+
+53.
+\* ==> +
+
+mutant:
+        rec_stack = [False] + self.vertices
+
+
+54.
+\* ==> -
+
+mutant:
+        rec_stack = [False] - self.vertices
+
+
+55.
+\* ==> /
+
+mutant:
+        rec_stack = [False] / self.vertices
+
+
+56.
+\* ==> %
+
+mutant:
+        rec_stack = [False] % self.vertices
+
+
+57.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+58.
+\[.+\] ==> []
+
+mutant:
+        rec_stack = [] * self.vertices
+
+
+59.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+60.
+True ==> False
+
+mutant:
+            visited[v] = False
+
+
+61.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+62.
+True ==> False
+
+mutant:
+            rec_stack[v] = False
+
+
+63.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+                if not (not visited[neighbor] and dfs(neighbor)):
+
+
+64.
+and  ==>  or 
+
+mutant:
+                if not visited[neighbor]  or dfs(neighbor):
+
+
+65.
+.* and ==> True and
+
+mutant:
+                if True and dfs(neighbor):
+
+
+66.
+.* and ==> True and
+
+mutant:
+                if nTrue and dfs(neighbor):
+
+
+67.
+.* and ==> True and
+
+mutant:
+                if not True and dfs(neighbor):
+
+
+68.
+.* and ==> True and
+
+mutant:
+                if not vTrue and dfs(neighbor):
+
+
+69.
+not ==> 
+
+mutant:
+                if  visited[neighbor] and dfs(neighbor):
+
+
+70.
+return .*\n ==> return None\n
+
+mutant:
+                    return None
+
+
+71.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                    pass
+
+
+72.
+True ==> False
+
+mutant:
+                    return False
+
+
+73.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+                elif not (rec_stack[neighbor]):
+
+
+74.
+return .*\n ==> return None\n
+
+mutant:
+                    return None
+
+
+75.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                    pass
+
+
+76.
+True ==> False
+
+mutant:
+                    return False
+
+
+77.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+78.
+return .*\n ==> return None\n
+
+mutant:
+            return None
+
+
+79.
+not ==> 
+
+mutant:
+        return any(dfs(node) for node in range(self.vertices) if  visited[node])
+
+
+80.
+return .*\n ==> return None\n
+
+mutant:
+        return None
+
+
+81.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+82.
+\* ==> +
+
+mutant:
+        visited = [False] + self.vertices
+
+
+83.
+\* ==> -
+
+mutant:
+        visited = [False] - self.vertices
+
+
+84.
+\* ==> /
+
+mutant:
+        visited = [False] / self.vertices
+
+
+85.
+\* ==> %
+
+mutant:
+        visited = [False] % self.vertices
+
+
+86.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+87.
+\[.+\] ==> []
+
+mutant:
+        visited = [] * self.vertices
+
+
+88.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        def dfs ( parent,v):
+
+
+89.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+90.
+True ==> False
+
+mutant:
+            visited[v] = False
+
+
+91.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+                if not (not visited[neighbor]):
+
+
+92.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+                    if dfs ( v,neighbor):
+
+
+93.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+                    if not (dfs(neighbor, v)):
+
+
+94.
+return .*\n ==> return None\n
+
+mutant:
+                        return None
+
+
+95.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                        pass
+
+
+96.
+True ==> False
+
+mutant:
+                        return False
+
+
+97.
+!= ==> ==
+
+mutant:
+                elif parent == neighbor:
+
+
+98.
+!= ==> <=
+
+mutant:
+                elif parent <= neighbor:
+
+
+99.
+!= ==> >=
+
+mutant:
+                elif parent >= neighbor:
+
+
+100.
+!= ==> >
+
+mutant:
+                elif parent > neighbor:
+
+
+101.
+!= ==> <
+
+mutant:
+                elif parent < neighbor:
+
+
+102.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+                elif not (parent != neighbor):
+
+
+103.
+return .*\n ==> return None\n
+
+mutant:
+                    return None
+
+
+104.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                    pass
+
+
+105.
+True ==> False
+
+mutant:
+                    return False
+
+
+106.
+return .*\n ==> return None\n
+
+mutant:
+            return None
+
+
+107.
+-([^>]) ==> +\1
+
+mutant:
+        return any(dfs(node, +1) for node in range(self.vertices) if not visited[node])
+
+
+108.
+-([^>]) ==> *\1
+
+mutant:
+        return any(dfs(node, *1) for node in range(self.vertices) if not visited[node])
+
+
+109.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        return any(dfs(node, -0) for node in range(self.vertices) if not visited[node])
+
+
+110.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        return any(dfs(node, -(1+1)) for node in range(self.vertices) if not visited[node])
+
+
+111.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        return any(dfs ( -1,node) for node in range(self.vertices) if not visited[node])
+
+
+112.
+not ==> 
+
+mutant:
+        return any(dfs(node, -1) for node in range(self.vertices) if  visited[node])
+
+
+113.
+return .*\n ==> return None\n
+
+mutant:
+        return None
+
+
+114.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+115.
+\* ==> +
+
+mutant:
+        dist = [float("inf")] + self.vertices
+
+
+116.
+\* ==> -
+
+mutant:
+        dist = [float("inf")] - self.vertices
+
+
+117.
+\* ==> /
+
+mutant:
+        dist = [float("inf")] / self.vertices
+
+
+118.
+\* ==> %
+
+mutant:
+        dist = [float("inf")] % self.vertices
+
+
+119.
+".+" ==> ""
+
+mutant:
+        dist = [float("")] * self.vertices
+
+
+120.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+121.
+\[.+\] ==> []
+
+mutant:
+        dist = [] * self.vertices
+
+
+122.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        dist[1] = 0
+
+
+123.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        dist[0] = 1
+
+
+124.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        dist[-1] = 0
+
+
+125.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        dist[0] = -1
+
+
+126.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+127.
+-([^>]) ==> +\1
+
+mutant:
+        for _ in range(self.vertices + 1):
+
+
+128.
+-([^>]) ==> *\1
+
+mutant:
+        for _ in range(self.vertices * 1):
+
+
+129.
+-([^>]) ==> /\1
+
+mutant:
+        for _ in range(self.vertices / 1):
+
+
+130.
+-([^>]) ==> %\1
+
+mutant:
+        for _ in range(self.vertices % 1):
+
+
+131.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        for _ in range(self.vertices - 0):
+
+
+132.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        for _ in range(self.vertices - -1):
+
+
+133.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        for _ in range(self.vertices - (1+1)):
+
+
+134.
+,.+, ==> ,
+
+mutant:
+            for u, weight in self.edges:
+
+
+135.
+\+ ==> -
+
+mutant:
+                if dist[u] != float("inf") and dist[u] - weight < dist[v]:
+
+
+136.
+\+ ==> *
+
+mutant:
+                if dist[u] != float("inf") and dist[u] * weight < dist[v]:
+
+
+137.
+\+ ==> /
+
+mutant:
+                if dist[u] != float("inf") and dist[u] / weight < dist[v]:
+
+
+138.
+\+ ==> %
+
+mutant:
+                if dist[u] != float("inf") and dist[u] % weight < dist[v]:
+
+
+139.
+!= ==> ==
+
+mutant:
+                if dist[u] == float("inf") and dist[u] + weight < dist[v]:
+
+
+140.
+!= ==> <=
+
+mutant:
+                if dist[u] <= float("inf") and dist[u] + weight < dist[v]:
+
+
+141.
+!= ==> >=
+
+mutant:
+                if dist[u] >= float("inf") and dist[u] + weight < dist[v]:
+
+
+142.
+!= ==> >
+
+mutant:
+                if dist[u] > float("inf") and dist[u] + weight < dist[v]:
+
+
+143.
+!= ==> <
+
+mutant:
+                if dist[u] < float("inf") and dist[u] + weight < dist[v]:
+
+
+144.
+< ==> >
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight > dist[v]:
+
+
+145.
+< ==> ==
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight == dist[v]:
+
+
+146.
+< ==> <=
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight <= dist[v]:
+
+
+147.
+< ==> >=
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight >= dist[v]:
+
+
+148.
+< ==> !=
+
+mutant:
+                if dist[u] != float("inf") and dist[u] + weight != dist[v]:
+
+
+149.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+                if not (dist[u] != float("inf") and dist[u] + weight < dist[v]):
+
+
+150.
+and  ==>  or 
+
+mutant:
+                if dist[u] != float("inf")  or dist[u] + weight < dist[v]:
+
+
+151.
+.* and ==> True and
+
+mutant:
+                if True and dist[u] + weight < dist[v]:
+
+
+152.
+.* and ==> True and
+
+mutant:
+                if dTrue and dist[u] + weight < dist[v]:
+
+
+153.
+.* and ==> True and
+
+mutant:
+                if dist[u] !=True and dist[u] + weight < dist[v]:
+
+
+154.
+.* and ==> True and
+
+mutant:
+                if dist[u] != fTrue and dist[u] + weight < dist[v]:
+
+
+155.
+\+ ==> -
+
+mutant:
+                    dist[v] = dist[u] - weight
+
+
+156.
+\+ ==> *
+
+mutant:
+                    dist[v] = dist[u] * weight
+
+
+157.
+\+ ==> /
+
+mutant:
+                    dist[v] = dist[u] / weight
+
+
+158.
+\+ ==> %
+
+mutant:
+                    dist[v] = dist[u] % weight
+
+
+159.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+                    dist[v] = dist[u] + weight
+                    break;
+
+
+160.
+(^\s*)(\S+.*)\n ==> \1\2\n\1continue;\n
+
+mutant:
+                    dist[v] = dist[u] + weight
+                    continue;
+
+
+161.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                    pass
+
+
+162.
+\+ ==> -
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] - weight < dist[v] for u, v, weight in self.edges)
+
+
+163.
+\+ ==> *
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] * weight < dist[v] for u, v, weight in self.edges)
+
+
+164.
+\+ ==> /
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] / weight < dist[v] for u, v, weight in self.edges)
+
+
+165.
+\+ ==> %
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] % weight < dist[v] for u, v, weight in self.edges)
+
+
+166.
+!= ==> ==
+
+mutant:
+        return any(dist[u] == float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+167.
+!= ==> <=
+
+mutant:
+        return any(dist[u] <= float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+168.
+!= ==> >=
+
+mutant:
+        return any(dist[u] >= float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+169.
+!= ==> >
+
+mutant:
+        return any(dist[u] > float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+170.
+!= ==> <
+
+mutant:
+        return any(dist[u] < float("inf") and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+171.
+< ==> >
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight > dist[v] for u, v, weight in self.edges)
+
+
+172.
+< ==> ==
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight == dist[v] for u, v, weight in self.edges)
+
+
+173.
+< ==> <=
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight <= dist[v] for u, v, weight in self.edges)
+
+
+174.
+< ==> >=
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight >= dist[v] for u, v, weight in self.edges)
+
+
+175.
+< ==> !=
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight != dist[v] for u, v, weight in self.edges)
+
+
+176.
+and  ==>  or 
+
+mutant:
+        return any(dist[u] != float("inf")  or dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+177.
+.* and ==> True and
+
+mutant:
+        return any(True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+178.
+.* and ==> True and
+
+mutant:
+        return any(dTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+179.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] !=True and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+180.
+.* and ==> True and
+
+mutant:
+        return any(dist[u] != fTrue and dist[u] + weight < dist[v] for u, v, weight in self.edges)
+
+
+181.
+return .*\n ==> return None\n
+
+mutant:
+        return None
+
+
+182.
+,.+, ==> ,
+
+mutant:
+        return any(dist[u] != float("inf") and dist[u] + weight < dist[v] for u, weight in self.edges)
+
+
+183.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+184.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+185.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+186.
+{.+} ==> {}
+
+mutant:
+        self.adj_list = {}
+
+
+187.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def union ( parent,self, u, v):
+
+
+188.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def union(self , u, parent, v):
+
+
+189.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def union(self, parent , v, u):
+
+
+190.
+,.+, ==> ,
+
+mutant:
+    def union(self, v):
+
+
+191.
+,.+, ==> ,
+
+mutant:
+    def union(self, parent, v):
+
+
+192.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+193.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        root_u = self.find_parent ( u,parent)
+
+
+194.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+195.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        root_v = self.find_parent ( v,parent)
+
+
+196.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+197.
+!= ==> ==
+
+mutant:
+        if root_u == root_v:
+
+
+198.
+!= ==> <=
+
+mutant:
+        if root_u <= root_v:
+
+
+199.
+!= ==> >=
+
+mutant:
+        if root_u >= root_v:
+
+
+200.
+!= ==> >
+
+mutant:
+        if root_u > root_v:
+
+
+201.
+!= ==> <
+
+mutant:
+        if root_u < root_v:
+
+
+202.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+        if not (root_u != root_v):
+
+
+203.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+204.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def find_parent ( parent,self, v):
+
+
+205.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def find_parent(self , v, parent):
+
+
+206.
+,.+, ==> ,
+
+mutant:
+    def find_parent(self, v):
+
+
+207.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+208.
+-([^>]) ==> +\1
+
+mutant:
+        if parent[v] == +1:
+
+
+209.
+== ==> !=
+
+mutant:
+        if parent[v] != -1:
+
+
+210.
+== ==> <=
+
+mutant:
+        if parent[v] <= -1:
+
+
+211.
+== ==> >=
+
+mutant:
+        if parent[v] >= -1:
+
+
+212.
+== ==> >
+
+mutant:
+        if parent[v] > -1:
+
+
+213.
+== ==> <
+
+mutant:
+        if parent[v] < -1:
+
+
+214.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        if parent[v] == -0:
+
+
+215.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        if parent[v] == -(1+1):
+
+
+216.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+        if not (parent[v] == -1):
+
+
+217.
+return .*\n ==> return None\n
+
+mutant:
+            return None
+
+
+218.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+219.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        parent[v] = self.find_parent ( parent[v,parent])
+
+
+220.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+221.
+return .*\n ==> return None\n
+
+mutant:
+        return None
+
+
+222.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+223.
+-([^>]) ==> +\1
+
+mutant:
+        parent = [+1] * self.vertices
+
+
+224.
+-([^>]) ==> *\1
+
+mutant:
+        parent = [*1] * self.vertices
+
+
+225.
+\* ==> +
+
+mutant:
+        parent = [-1] + self.vertices
+
+
+226.
+\* ==> -
+
+mutant:
+        parent = [-1] - self.vertices
+
+
+227.
+\* ==> /
+
+mutant:
+        parent = [-1] / self.vertices
+
+
+228.
+\* ==> %
+
+mutant:
+        parent = [-1] % self.vertices
+
+
+229.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        parent = [-0] * self.vertices
+
+
+230.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        parent = [-(1+1)] * self.vertices
+
+
+231.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+232.
+\[.+\] ==> []
+
+mutant:
+        parent = [] * self.vertices
+
+
+233.
+,.+, ==> ,
+
+mutant:
+        for u, _ in self.edges:
+
+
+234.
+== ==> !=
+
+mutant:
+            if self.find_parent(parent, u) != self.find_parent(parent, v):
+
+
+235.
+== ==> <=
+
+mutant:
+            if self.find_parent(parent, u) <= self.find_parent(parent, v):
+
+
+236.
+== ==> >=
+
+mutant:
+            if self.find_parent(parent, u) >= self.find_parent(parent, v):
+
+
+237.
+== ==> >
+
+mutant:
+            if self.find_parent(parent, u) > self.find_parent(parent, v):
+
+
+238.
+== ==> <
+
+mutant:
+            if self.find_parent(parent, u) < self.find_parent(parent, v):
+
+
+239.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            if self.find_parent ( u,parent) == self.find_parent(parent, v):
+
+
+240.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            if self.find_parent(parent, u) == self.find_parent ( v,parent):
+
+
+241.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+            if not (self.find_parent(parent, u) == self.find_parent(parent, v)):
+
+
+242.
+,.+, ==> ,
+
+mutant:
+            if self.find_parent(parent, v):
+
+
+243.
+return .*\n ==> return None\n
+
+mutant:
+                return None
+
+
+244.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+                pass
+
+
+245.
+True ==> False
+
+mutant:
+                return False
+
+
+246.
+(^\s*)(\S+.*)\n ==> \1\2\n\1break;\n
+
+mutant:
+            self.union(parent, u, v)
+            break;
+
+
+247.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.union ( u,parent, v)
+
+
+248.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+            self.union(parent , v, u)
+
+
+249.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+            pass
+
+
+250.
+,.+, ==> ,
+
+mutant:
+            self.union(parent, v)
+
+
+251.
+return .*\n ==> return None\n
+
+mutant:
+        return None
+
+
+252.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def __init__ ( graph,self):
+
+
+253.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+254.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+255.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+256.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+257.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def __init__ ( vertices,self):
+
+
+258.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+259.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+260.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+261.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+    def add_edges ( edges,self):
+
+
+262.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+263.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+264.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+265.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+266.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+267.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+268.
+".+" ==> ""
+
+mutant:
+        print(f"")
+
+
+269.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+270.
+".+" ==> ""
+
+mutant:
+        print(f"")
+
+
+271.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+272.
+".+" ==> ""
+
+mutant:
+        print(f"")
+
+
+273.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+        pass
+
+
+274.
+== ==> !=
+
+mutant:
+if __name__ != "__main__":
+
+
+275.
+== ==> <=
+
+mutant:
+if __name__ <= "__main__":
+
+
+276.
+== ==> >=
+
+mutant:
+if __name__ >= "__main__":
+
+
+277.
+== ==> >
+
+mutant:
+if __name__ > "__main__":
+
+
+278.
+== ==> <
+
+mutant:
+if __name__ < "__main__":
+
+
+279.
+if (.*):\n ==> if not (\1):\n
+
+mutant:
+if not (__name__ == "__main__"):
+
+
+280.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+    graph_handler = WeightedGraphHandler(0)
+
+
+281.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+    graph_handler = WeightedGraphHandler(1)
+
+
+282.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+    graph_handler = WeightedGraphHandler(-1)
+
+
+283.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+    graph_handler = WeightedGraphHandler((4+1))
+
+
+284.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+    graph_handler = WeightedGraphHandler((4-1))
+
+
+285.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+286.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 0, 10),
+
+
+287.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 1, 0),
+
+
+288.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (1, 1, 10),
+
+
+289.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (0, 1, 1),
+
+
+290.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (-1, 1, 10),
+
+
+291.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (0, -1, 10),
+
+
+292.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (0, 1, -1),
+
+
+293.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (0, (1+1), 10),
+
+
+294.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (0, 1, (10+1)),
+
+
+295.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        (0, 1, (10-1)),
+
+
+296.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+         ( 1,0, 10),
+
+
+297.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        (0 , 10, 1),
+
+
+298.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 2, 20),
+
+
+299.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (1, 0, 20),
+
+
+300.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (1, 2, 0),
+
+
+301.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (1, 1, 20),
+
+
+302.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (1, 2, 1),
+
+
+303.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (-1, 2, 20),
+
+
+304.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (1, -1, 20),
+
+
+305.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (1, 2, -1),
+
+
+306.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        ((1+1), 2, 20),
+
+
+307.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (1, (2+1), 20),
+
+
+308.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (1, 2, (20+1)),
+
+
+309.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        (1, 2, (20-1)),
+
+
+310.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+         ( 2,1, 20),
+
+
+311.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        (1 , 20, 2),
+
+
+312.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 3, 30),
+
+
+313.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (2, 0, 30),
+
+
+314.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (2, 3, 0),
+
+
+315.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (1, 3, 30),
+
+
+316.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (2, 1, 30),
+
+
+317.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (2, 3, 1),
+
+
+318.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (-1, 3, 30),
+
+
+319.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (2, -1, 30),
+
+
+320.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (2, 3, -1),
+
+
+321.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        ((2+1), 3, 30),
+
+
+322.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (2, (3+1), 30),
+
+
+323.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (2, 3, (30+1)),
+
+
+324.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        (2, (3-1), 30),
+
+
+325.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        (2, 3, (30-1)),
+
+
+326.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+         ( 3,2, 30),
+
+
+327.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        (2 , 30, 3),
+
+
+328.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 0, 40),
+
+
+329.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (3, 0, 0),
+
+
+330.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (1, 0, 40),
+
+
+331.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (3, 1, 40),
+
+
+332.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (3, 0, 1),
+
+
+333.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (-1, 0, 40),
+
+
+334.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (3, -1, 40),
+
+
+335.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (3, 0, -1),
+
+
+336.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        ((3+1), 0, 40),
+
+
+337.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (3, 0, (40+1)),
+
+
+338.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        ((3-1), 0, 40),
+
+
+339.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        (3, 0, (40-1)),
+
+
+340.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+         ( 0,3, 40),
+
+
+341.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        (3 , 40, 0),
+
+
+342.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 0, 50)
+
+
+343.
+(\D)(\d+)(\D) ==> \g<1>0\3
+
+mutant:
+        (0, 2, 0)
+
+
+344.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (1, 2, 50)
+
+
+345.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (0, 1, 50)
+
+
+346.
+(\D)(\d+)(\D) ==> \g<1>1\3
+
+mutant:
+        (0, 2, 1)
+
+
+347.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (-1, 2, 50)
+
+
+348.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (0, -1, 50)
+
+
+349.
+(\D)(\d+)(\D) ==> \g<1>-1\3
+
+mutant:
+        (0, 2, -1)
+
+
+350.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (0, (2+1), 50)
+
+
+351.
+(\D)(\d+)(\D) ==> \1(\2+1)\3
+
+mutant:
+        (0, 2, (50+1))
+
+
+352.
+(\D)(\d+)(\D) ==> \1(\2-1)\3
+
+mutant:
+        (0, 2, (50-1))
+
+
+353.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+         ( 2,0, 50)
+
+
+354.
+([,\(\[\{])([^=,\)\}\]]+),([^=,\)\}\]]+)([,\)\]\}]) ==>  \1\3,\2\4
+
+mutant:
+        (0 , 50, 2)
+
+
+355.
+,.+, ==> ,
+
+mutant:
+        (0, 50)
+
+
+356.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+357.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
+358.
+(^\s*)(\S+.*\n) ==> \1pass
+
+mutant:
+    pass
+
+
